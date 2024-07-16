@@ -47,7 +47,7 @@ const Lights = () => {
   )
 }
 
-const VoyagerCanvas = ({ scrollContainer }) => {
+const VoyagerCanvas = () => {
   const [scale, setScale] = useState([2, 2, 2]);
   const [position, setPosition] = useState([0.2, -0.7, 0]);
 
@@ -76,7 +76,7 @@ const VoyagerCanvas = ({ scrollContainer }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [scrollContainer]);
+  }, []);
 
   return (
     <Canvas className={`!absolute w-full h-screen bg-transparent z-30`} camera={{ near: 0.1, far: 1000 }}>

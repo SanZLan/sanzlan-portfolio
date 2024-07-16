@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Voyager from "./Voyager.jsx";
+import Voyager from "./Voyager";
 
 const Hero = () => {
   const ref = useRef(null);
@@ -40,7 +40,7 @@ const Hero = () => {
           backgroundSize: "cover",
         }}
       />
-      <Voyager scrollContainer={ref} scrollYProgress={scrollYProgress}/>
+      <Voyager />
     </div>
   );
 }
