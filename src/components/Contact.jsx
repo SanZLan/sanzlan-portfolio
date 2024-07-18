@@ -26,13 +26,19 @@ const Contact = () => {
 
     setLoading(true)
 
-    const response = await fetch('https://getform.io/f/aejylpmb', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(form),
-    });
+    const formData = {
+      ...form, 
+      _subject: 'Portfolio form submission',
+      _template: 'table'
+    }
+
+    const response = await fetch('https://formsubmit.co/s.zuluaga27@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: formData
+    })
 
     if (response.ok) {
       setForm({
