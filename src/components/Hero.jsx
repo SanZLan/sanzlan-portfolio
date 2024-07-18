@@ -41,7 +41,7 @@ const Hero = () => {
       <motion.div
         className="absolute h-screen inset-0 z-0"
         style={{
-          backgroundImage: `url(./src/assets/Layer1.png)`,
+          backgroundImage: `url(./Layer1.png)`,
           backgroundPosition: "top",
           backgroundSize: "cover",
           y: layer1,
@@ -51,7 +51,7 @@ const Hero = () => {
       <motion.div
         className="absolute h-screen inset-0 z-20"
         style={{
-          backgroundImage: `url(./src/assets/Layer2.png)`,
+          backgroundImage: `url(./Layer2.png)`,
           backgroundPosition: "top",
           backgroundSize: "cover",
           y: layer2,
@@ -61,7 +61,7 @@ const Hero = () => {
       <motion.div
         className="absolute h-screen inset-0 z-30"
         style={{
-          backgroundImage: `url(./src/assets/Layer3.png)`,
+          backgroundImage: `url(./Layer3.png)`,
           backgroundPosition: "top",
           backgroundSize: "cover",
           y: layer3,
