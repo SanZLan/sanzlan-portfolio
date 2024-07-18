@@ -12,7 +12,7 @@ const Hero = () => {
   const layer1 = useTransform(scrollYProgress, [0, 1], ["0vh", "200vh"]);
   const layer2 = useTransform(scrollYProgress, [0, 0.5, 1], ["0vh", "100vh", "150vh"]);
   const layer3 = useTransform(scrollYProgress, [0, 0.5, 1], ["0vh", "100vh", "100vh"]);
-  const textY = useTransform(scrollYProgress, [0, 0.5, 1], ["0vh", "100vh", "170vh"]);
+  const textY = useTransform(scrollYProgress, [0, 0.5, 1], ["0vh", "100vh", "160vh"]);
 
   return (
     <div
@@ -23,7 +23,7 @@ const Hero = () => {
         style={{ y: textY }}
         className="relative z-10 -mt-0"
       >
-        <div className='parallax__content relative ml-4 top-[8%] sm:ml-8 sm:top-[10%] lg:top-[10%] w-full mx-auto lg:pl-[6rem] lg:pr-[6rem] xl:pl-[10rem] xl:pr-40 2xl:px-40 3xl:px-60 flex flex-col lg:flex-row lg:items-end'>
+        <div className='parallax__content relative ml-4 top-[8%] sm:ml-8 sm:top-[10%] lg:top-[8%] w-full mx-auto lg:pl-[6rem] lg:pr-[6rem] xl:pl-[10rem] xl:pr-40 2xl:px-40 3xl:px-60 flex flex-col lg:flex-row lg:items-end'>
           <div className="flex-1 lg:mb-0">
             <h1 className='font-medium text-white text-[40px] sm:text-[38px] md:text-[50px] lg:text-[70px] 2xl:text-[120px] 3xl:text-[150px] leading-[110px] 2xl:leading-[160px]'>
               SANTIAGO ZULUAGA
