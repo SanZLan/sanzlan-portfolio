@@ -1,11 +1,13 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import ReCaptcha from 'react-google-recaptcha'
 
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -101,9 +103,14 @@ const Contact = () => {
             value={form.message}
             onChange={e => setForm({ ...form, message: e.target.value })}
           />
+          <ReCaptcha 
+            sitekey='6LfvVxMqAAAAABlHaVw74lopQc2sEIRV2fn82Der'
+            onChange={(e) => setCaptchaValue(e)}
+          />
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 w-fit text-white font-bold shadow-md shadow-primary '
+            className={`${captchaValue ? 'bg-tertiary' : 'bg-gray-600 hover:border-transparent' }  py-3 px-8 w-fit text-white font-bold shadow-md shadow-primary`}
+            disabled={!captchaValue}
           >
             {loading ? "Sending..." : "Send"}
           </button>
