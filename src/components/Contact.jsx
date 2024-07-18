@@ -6,7 +6,6 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 
 const Contact = () => {
-  const [loading, setLoading] = useState(false);
   const [captchaValue, setCaptchaValue] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -19,35 +18,6 @@ const Contact = () => {
   useEffect(() => {
     controls.start("show");
   }, [controls]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    setLoading(true)
-
-    const formData = {
-      ...form, 
-      _subject: 'Portfolio form submission',
-      _template: 'table',
-      _captcha: 'false'
-    }
-
-    const response = await fetch('https://formsubmit.co/7cfa71977f94ebb341e4278d8eb0eb6c', {
-        method: 'POST',
-        body: formData
-    })
-
-    if (response.ok) {
-      setForm({
-        name: "",
-        email: "",
-        message: "",
-      });
-      setLoading(false)
-    } else {
-      console.error('Form submission failed');
-    }
-  };
 
   return (
     <div
@@ -77,7 +47,8 @@ const Contact = () => {
 
         <form
           className="mt-12 gap-4 flex flex-col"
-          onSubmit={handleSubmit}
+          action="https://formsubmit.co/7cfa71977f94ebb341e4278d8eb0eb6c"
+          method="POST"
         >
           <span className='text-white font-medium mt-3'>Full Name</span>
           <input
@@ -106,6 +77,10 @@ const Contact = () => {
             value={form.message}
             onChange={e => setForm({ ...form, message: e.target.value })}
           />
+          <input type="hidden" name="_subject" value="Portfolio Form Submission"></input>
+          <input type="hidden" name="_template" value="table"></input>
+          <input type="hidden" name="_captcha" value="false"></input>
+          <input type="hidden" name="_next" value="https://santiago-zuluaga.com/"></input>
           <ReCaptcha 
             sitekey='6LfvVxMqAAAAABlHaVw74lopQc2sEIRV2fn82Der'
             onChange={(e) => setCaptchaValue(e)}
@@ -114,9 +89,7 @@ const Contact = () => {
             type='submit'
             className={`${captchaValue ? 'bg-tertiary' : 'bg-gray-600 hover:border-transparent' }  py-3 px-8 w-fit text-white font-bold shadow-md shadow-primary`}
             disabled={!captchaValue}
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+          >Send</button>
         </form>
       </motion.div>
     </div>
