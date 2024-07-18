@@ -13,8 +13,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
-  // const [loading, setLoading] = useState(false);
+  
   const controls = useAnimation();
 
   useEffect(() => {
@@ -29,14 +28,12 @@ const Contact = () => {
     const formData = {
       ...form, 
       _subject: 'Portfolio form submission',
-      _template: 'table'
+      _template: 'table',
+      _captcha: 'false'
     }
 
-    const response = await fetch('https://formsubmit.co/s.zuluaga27@gmail.com', {
+    const response = await fetch('https://formsubmit.co/7cfa71977f94ebb341e4278d8eb0eb6c', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
         body: formData
     })
 
