@@ -57,6 +57,10 @@ button:focus-visible {
   color: #1689C8 !important;
 }
 
+.cursor-voyager {
+    cursor: url('../logo.svg'), default;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
