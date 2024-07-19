@@ -14,6 +14,10 @@ export const navLinks = [
     title: "Hero",
   },
   {
+    id: "about",
+    title: "About",
+  },
+  {
     id: "portfolio",
     title: "Portfolio",
   },
@@ -25,6 +29,13 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+];
+
+const about = [
+      "My name is <span style='color: white;'>Santiago Zuluaga Langton</span>, I'm a <span style='color: white;'>full-stack developer, data analyst and economist</span> based in Bogotá, Colombia. With professional foundations on consulting services, development of indicators for project evaluations and processing of large datasets to generate visualizations and insights, my curiosity and <span style='color: white;'>passion for technology</span> led me to jump to a carrer in <span style='color: white;'>development</span>.",
+      "My day to day, working in a streaming service company includes delivering <span style='color: white;'>fun and functional front experiences</span> for customers, writing scripts to <span style='color: white;'>automate processes</span> and <span style='color: white;'>scraping data</span> and managing other <span style='color: white;'>IT solutions and infrastructure</span> processes.",
+      "I have strong skills in <span style='color: white;'>modern web technologies</span> such as React, Redux, Next.js, TypeScript, Node.js, REST APIs, GraphQL, SQL and NoSQL, GIT version control, unit and end-to-end testing. I'm currently working on further developing this abilities with stronger manipulation of <span style='color: white;'>3D modeling</span> with Three.js, Drei and React Three Fiber; <span style='color: white;'>animations</span> with Framer Motion and the exploration of <span style='color: white;'>AI</span> and its possibilites.",
+      "When I'm not at the computer, I'm usually hanging out with my girlfriend and the two dogs of ours, playing videogames, reading or trying to learn about something. I love motorcyles, science, technology, the tenacity of the human siprit... and of course...</br> <span style='color: white;'><a class='cursor-voyager relative group inline-block' href='https://voyager.jpl.nasa.gov/golden-record/golden-record-cover/'>the Voyagers and their Golden Records!<span class='block h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left bg-amber-400'></span></a></span>"
 ];
 
 const experiences = [
@@ -93,5 +104,5 @@ const portfolio = [
   },
 ];
 
-export { experiences, portfolio };
+export { about, portfolio, experiences };
 

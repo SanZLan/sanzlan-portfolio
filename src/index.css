@@ -53,6 +53,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.about__text span:hover {
+  color: #1689C8 !important;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

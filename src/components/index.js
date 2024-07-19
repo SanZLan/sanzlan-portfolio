@@ -1,3 +1,4 @@
+import About from "./About"
 import Contact from "./Contact"
 import Experience from "./Experience"
 import Hero from "./Hero";
@@ -8,6 +9,6 @@ import Position from "./Position";
 import Voyager from "./Voyager";
 
 export {
-    Contact, Experience, Loader, Hero, Navbar, Portfolio, Position, Voyager
+    About, Contact, Experience, Loader, Hero, Navbar, Portfolio, Position, Voyager
 };
 
