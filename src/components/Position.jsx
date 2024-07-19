@@ -13,7 +13,7 @@ const produceSpans = (text, position, animation) => {
 const Position = () => {
   return (
     <div className="relative cursor-default font-medium text-white text-base xs:text-xl sm:text-3xl md:text-[36px] 2xl:text-[66px] leading-[32px] 2xl:leading-[40px] w-full flex justify-center items-center">
-      <div className="absolute inset-0 top-[-30px] sm:top-[-10px] lg:top-0 flex flex-col">
+      <div className="absolute inset-0 flex flex-col lg:top-2">
         <div className="text first absolute left-1 md:left-2 2xl:left-4 flex" aria-label="Software Developer">
           {produceSpans("Web Developer", "botom", "animate-textRotate1")}
         </div>

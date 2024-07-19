@@ -15,7 +15,7 @@ const About = () => {
       <div className='mt-10 md:mt-20 flex flex-col gap-10 md:gap-20'>
         {about.map((paragraph, index) => (
           <p key={index}
-            className="about__text cursor-default text-center text-slate-500 font-semibold text-[10px] xs:text-[14px] md:text-[18px] lg:text-[22px] xl:text-[28px] lg:leading-[30px]"
+            className="about__text cursor-default text-center text-slate-500 font-semibold text-[14px] md:text-[18px] lg:text-[22px] xl:text-[28px] lg:leading-[30px]"
             dangerouslySetInnerHTML={{ __html: paragraph }}
           >
           </p>
