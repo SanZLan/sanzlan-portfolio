@@ -58,7 +58,7 @@ button:focus-visible {
 }
 
 .cursor-voyager {
-    cursor: url('logo.svg'), default;
+    cursor: url('/logo.svg'), default;
 }
 
 @media (prefers-color-scheme: light) {
