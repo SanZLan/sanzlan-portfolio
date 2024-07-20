@@ -1,12 +1,11 @@
-import { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { useGLTF/* , useHelper */ } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion-3d";
 
 import voyagerModel from "../assets/3d/voyager.glb";
 import Loader from "./Loader";
-// import { DirectionalLightHelper, HemisphereLightHelper, PointLightHelper, SpotLightHelper } from "three";
 
 const Voyager = ({ scale, position }) => {
   const { scene } = useGLTF(voyagerModel);
@@ -30,11 +29,6 @@ const Lights = () => {
   const pointLightRef = useRef()
   const spotLightRef = useRef()
   const hemisphereLightRef = useRef()
-
-  // useHelper(directionalLightRef, DirectionalLightHelper, 1, 'limegreen')
-  // useHelper(pointLightRef, PointLightHelper, 1, 'limegreen')
-  // useHelper(spotLightRef, SpotLightHelper, 1, 'limegreen')
-  // useHelper(hemisphereLightRef, HemisphereLightHelper, 1, 'limegreen')
 
   return (
     <>
@@ -91,4 +85,4 @@ const VoyagerCanvas = ({ scrollContaienr }) => {
   );
 };
 
-export default VoyagerCanvas;
+export default React.memo(VoyagerCanvas);

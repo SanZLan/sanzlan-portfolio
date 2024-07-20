@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import Voyager from "./Voyager";
 import Position from "./Position";
 
@@ -31,7 +31,7 @@ const Hero = () => {
             <Position />
           </div>
           <div className="flex-1 flex justify-start lg:justify-center mt-4 sm:mt-14 lg:mt-10 2xl:mt-0">
-            <div className='font-bold text-[25px] mt-8 lg:-mb-4 xl:mb-0 sm:text-[30px] md:text-[36px] 2xl:text-[46px] sm:leading-[40px] md:leading-[50px] 2xl:leading-[60px] streaky-glow max-w-sm 2xl:max-w-lg text-white text-left lg:mb-4'>
+            <div className='font-bold text-[25px] mt-8 lg:-mb-4 xl:mb-0 sm:text-[30px] md:text-[36px] 2xl:text-[46px] sm:leading-[40px] md:leading-[50px] 2xl:leading-[60px] streaky-glow max-w-sm 2xl:max-w-lg text-white text-left'>
               Passionate about <br/> science, technology and astronomy.
             </div>
           </div>
@@ -73,4 +73,4 @@ const Hero = () => {
   );
 }
 
-export default Hero
+export default React.memo(Hero)
