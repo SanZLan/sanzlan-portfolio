@@ -35,7 +35,7 @@ const Voyager = ({ scale, position, scrollContaienr }) => {
 	positionY = useTransform(
 		scrollYProgress,
 		[0, 0.2, 1],
-		[position[1], "-2", "5"]
+		[position[1], "-3", "5"]
 	);
 	positionZ = useTransform(
 		scrollYProgress,
