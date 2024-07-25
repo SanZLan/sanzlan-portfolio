@@ -3,110 +3,99 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 #root {
-  width: 100%;
+	width: 100%;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+	font-size: 3.2em;
+	line-height: 1.1;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+	border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+	outline: 4px auto -webkit-focus-ring-color;
 }
 
 .about__text span:hover {
-  color: #1689C8 !important;
+	color: #1689c8 !important;
 }
 
 .cursor-voyager {
-    cursor: url('/logo.svg'), pointer;
+	cursor: url("/logo.svg"), pointer;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
 }
 
 .streaky-glow {
-  position: relative;
-  font-family: inherit;
-  color: transparent;
-  background: linear-gradient(90deg, #fff, rgba(255, 200, 0, 0.679), #0ff, #fff);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: glow 4s infinite alternate, streaky-move 4s linear infinite;
-}
-
-@keyframes glow {
-  0% {
-    text-shadow: /* 0 0 5px rgba(255, 255, 255, 0.2), 
-                 0 0 10px rgba(255, 255, 255, 0.2),  */
-                 0 0 20px rgba(255, 255, 255, 0.2), 
-                 0 0 40px rgba(255, 255, 255, 0.2), 
-                 0 0 60px rgba(255, 255, 255, 0.2);
-  }
-  100% {
-    text-shadow: /* 0 0 5px rgba(255, 255, 255, 0.2), 
-                 0 0 10px rgba(255, 255, 255, 0.4),  */
-                 0 0 20px rgba(255, 255, 255, 0.6), 
-                 0 0 40px rgba(255, 255, 255, 0.8), 
-                 0 0 60px rgba(255, 255, 255, 1);
-  }
+	position: relative;
+	font-family: inherit;
+	color: transparent;
+	background: linear-gradient(
+		90deg,
+		#fff,
+		rgba(255, 200, 0, 0.679),
+		#0ff,
+		#fff
+	);
+	background-size: 200% 200%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation: streaky-move 4s linear infinite;
 }
 
 @keyframes streaky-move {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 200% 200%;
-  }
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 200% 200%;
+	}
 }
