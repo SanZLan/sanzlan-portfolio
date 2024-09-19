@@ -1,6 +1,6 @@
 # SanZLan portfolio website
 
-![Portfolio Thumbnail](https://ibb.co/FqJbRpR)
+![Portfolio Thumbnail](https://i.ibb.co/2YP7GJG/preview.png)
 
 ## Introduction
 
