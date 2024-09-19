@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { useScroll, useTransform, useMotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
@@ -9,6 +9,8 @@ import Loader from "./Loader";
 
 const Voyager = ({ scale, position, scrollContaienr }) => {
 	const { scene } = useGLTF(voyagerModel);
+
+	const { size } = useThree();
 
 	const { scrollYProgress } = useScroll({
 		target: scrollContaienr,
@@ -21,7 +23,7 @@ const Voyager = ({ scale, position, scrollContaienr }) => {
 	let positionY = useMotionValue(0);
 	let positionZ = useMotionValue(0);
 
-	rotationX1 = useTransform(scrollYProgress, [0, 1], ["0.3", "-1"]);
+	rotationX1 = useTransform(scrollYProgress, [0, 1], ["0", "0.3"]);
 	rotationY1 = useTransform(
 		scrollYProgress,
 		[0, 0.2, 1],
@@ -29,18 +31,18 @@ const Voyager = ({ scale, position, scrollContaienr }) => {
 	);
 	positionX = useTransform(
 		scrollYProgress,
-		[0, 0.2, 1],
-		[position[0], "0", "-3"]
+		[0, 0.2, 0.4, 1],
+		[position[0], "0", "-20", "-20"]
 	);
 	positionY = useTransform(
 		scrollYProgress,
-		[0, 0.2, 1],
-		[position[1], "-3", "5"]
+		[0, 0.2, 0.4, 1],
+		[position[1], "0", "-10", "-10"]
 	);
 	positionZ = useTransform(
 		scrollYProgress,
-		[0, 0.2, 1],
-		[position[2], "0", "0"]
+		[0, 0.2, 0.4, 1],
+		[position[2], "0", "-15", "-15"]
 	);
 
 	return (
@@ -108,7 +110,7 @@ const VoyagerCanvas = ({ scrollContaienr }) => {
 				setPosition([3, 5, -10]);
 			} else {
 				setScale([1, 1, 1]);
-				setPosition([6, 5, -15]);
+				setPosition([6, -5, -15]);
 			}
 		};
 
@@ -121,7 +123,7 @@ const VoyagerCanvas = ({ scrollContaienr }) => {
 
 	return (
 		<Canvas
-			className={`!absolute w-full h-screen bg-transparent z-40`}
+			className={`!fixed w-full h-screen bg-transparent pointer-events-none z-40`}
 			camera={{ near: 0.1, far: 1000 }}>
 			<Suspense fallback={<Loader />}>
 				<Lights />

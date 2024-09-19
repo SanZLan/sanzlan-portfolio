@@ -1,8 +1,24 @@
-# React + Vite
+# SanZLan portfolio website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Thumbnail](https://ibb.co/FqJbRpR)
 
-Currently, two official plugins are available:
+## Introduction
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+My developer portfolio showcasing my experience, work and also abilities with React and a lil' bit of my interests.
+
+## Technologies
+
+- Vite - Build tool
+- JavaScript - Programming language
+- React - UI Framework
+- Tailwind - CSS Styling
+- Three.js - 3D model handling
+- Framer Motion - Animations library
+- Render - Hosting
+- GitHub - Version control & CI/CD
+
+## Extra Resources
+
+- [Voyager 3D model from NASA](https://science.nasa.gov/resource/voyager-3d-model/)
+- [Original hero background image from Alexandr Podvalny in Unsplash](https://unsplash.com/photos/landscape-photo-of-mountain-during-nighttime-n_Jb_d8O43Q)
+- [Original nightsky for hero background image by Mohammad Alizalde in Unsplash](https://unsplash.com/photos/brown-mountains-under-blue-sky-4wzRuAb-KWs)
